@@ -126,5 +126,4 @@ contract StakingContractTest is Test {
         stakingContract.withdraw(1);
         assertEq(token.balanceOf(user), 0);
     }
-
 }

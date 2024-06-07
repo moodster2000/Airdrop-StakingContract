@@ -33,7 +33,7 @@ contract MyNFTToken is ERC721, Ownable2Step, ERC721Royalty {
     /// @notice Constructor for the MyNFTToken contract.
     /// @param initialOwner The initial owner of the contract.
     /// @param _merkleRoot The merkle root for verifying discount eligibility.
-    constructor(address initialOwner, bytes32 _merkleRoot) ERC721("MyNFTToken", "MYNFT") Ownable2Step(initialOwner) {
+    constructor(address initialOwner, bytes32 _merkleRoot) ERC721("MyNFTToken", "MYNFT") Ownable(initialOwner) {
         totalSupply = 0;
         _setDefaultRoyalty(initialOwner, ROYALTY_FEE_NUMERATOR);
         merkleRoot = _merkleRoot;
